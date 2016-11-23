@@ -1,5 +1,7 @@
 <?php
+
 namespace Shieldfy\Sniffer\Types;
+
 use Shieldfy\Sniffer\TypeInterface;
 
 class StringType implements TypeInterface
@@ -8,8 +10,9 @@ class StringType implements TypeInterface
     {
         return !preg_match('/[^a-z0-9\.\s]/isU', $input);
     }
-    public function __toString(){
-    	return 'string';
+
+    public function __toString()
+    {
+        return 'string';
     }
 }
-
