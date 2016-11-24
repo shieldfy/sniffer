@@ -5,6 +5,7 @@ Shieldfy Sniffer is a small composer package to detect the input type , now supp
 [![Packagist](https://img.shields.io/packagist/v/shieldfy/sniffer.svg?label=Packagist&style=flat-square)](https://packagist.org/packages/shieldfy/sniffer)
 [![License](https://img.shields.io/packagist/l/shieldfy/sniffer.svg?label=License&style=flat-square)](https://github.com/shieldfy/sniffer/blob/master/LICENSE)
 [![Code Climate](https://img.shields.io/codeclimate/github/shieldfy/sniffer.svg)](https://codeclimate.com/github/shieldfy/sniffer)
+[![Travis](https://img.shields.io/travis/shieldfy/sniffer.svg)](https://travis-ci.org/shieldfy/sniffer)
 
 
 
