@@ -21,7 +21,7 @@ composer require shieldfy/sniffer
 ## Usage & Examples
 
 ```php
-$type = (new \Shieldfy\Sniffer\Sniffer)->sniff('12.5'); //integer
+$type = (new \Shieldfy\Sniffer\Sniffer)->sniff('12.5'); //number
 
 $type = (new \Shieldfy\Sniffer\Sniffer)->sniff('hello world'); //string
 
