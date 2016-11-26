@@ -63,6 +63,21 @@ class Sniffer
     }
 
     /**
+    * test against particular type
+    * 
+    * @param mixed $input
+    *
+    * @return boolean
+    */
+    public function is($input,$type)
+    {
+        if(!isset($this->types[$type]))
+            throw new \Exception("Type Not found use one of supported types ( ".implode(' , ',array_keys($this->types))." )");
+        $typeClass = $this->types[$type];
+        return (new $typeClass())->sniff($input);            
+    }
+
+    /**
      * Start Sniffing array.
      *
      * @param array $inputs
