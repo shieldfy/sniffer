@@ -33,7 +33,7 @@ $type = (new \Shieldfy\Sniffer\Sniffer)->sniff(serialize(['hello'=>1,'world'=>'!
 $type = (new \Shieldfy\Sniffer\Sniffer)->sniff(['555','abc']);
 
 //test against particular type
-$result = (new \Shieldfy\Sniffer\Sniffer)->sniff('123456789','number'); //true
+$result = (new \Shieldfy\Sniffer\Sniffer)->is('123456789','number'); //true
 
 //you can register your own sniffer on the runtime
 $type = (new \Shieldfy\Sniffer\Sniffer)->register('hello',function($input){
