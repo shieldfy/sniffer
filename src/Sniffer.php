@@ -14,7 +14,7 @@ class Sniffer
     public function __construct()
     {
         $this->types = [
-            'integer'   => \Shieldfy\Sniffer\Types\IntegerType::class,
+            'number'   => \Shieldfy\Sniffer\Types\NumberType::class,
             'string'    => \Shieldfy\Sniffer\Types\StringType::class,
             'json'      => \Shieldfy\Sniffer\Types\JsonType::class,
             'serialize' => \Shieldfy\Sniffer\Types\SerializeType::class,

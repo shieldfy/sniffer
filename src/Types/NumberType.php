@@ -4,7 +4,7 @@ namespace Shieldfy\Sniffer\Types;
 
 use Shieldfy\Sniffer\TypeInterface;
 
-class IntegerType implements TypeInterface
+class NumberType implements TypeInterface
 {
     public function sniff($input)
     {
