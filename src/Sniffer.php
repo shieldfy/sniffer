@@ -14,7 +14,7 @@ class Sniffer
     public function __construct()
     {
         $this->types = [
-            'number'   => \Shieldfy\Sniffer\Types\NumberType::class,
+            'number'    => \Shieldfy\Sniffer\Types\NumberType::class,
             'string'    => \Shieldfy\Sniffer\Types\StringType::class,
             'json'      => \Shieldfy\Sniffer\Types\JsonType::class,
             'serialize' => \Shieldfy\Sniffer\Types\SerializeType::class,
@@ -63,18 +63,20 @@ class Sniffer
     }
 
     /**
-    * test against particular type
-    * 
-    * @param mixed $input
-    *
-    * @return boolean
-    */
-    public function is($input,$type)
+     * test against particular type.
+     *
+     * @param mixed $input
+     *
+     * @return bool
+     */
+    public function is($input, $type)
     {
-        if(!isset($this->types[$type]))
-            throw new \Exception("Type Not found use one of supported types ( ".implode(' , ',array_keys($this->types))." )");
+        if (!isset($this->types[$type])) {
+            throw new \Exception('Type Not found use one of supported types ( '.implode(' , ', array_keys($this->types)).' )');
+        }
         $typeClass = $this->types[$type];
-        return (new $typeClass())->sniff($input);            
+
+        return (new $typeClass())->sniff($input);
     }
 
     /**
