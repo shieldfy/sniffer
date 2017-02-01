@@ -44,6 +44,12 @@ $type = (new \Shieldfy\Sniffer\Sniffer)->register('hello',function($input){
 
 ```
 
+### note about serialization
+
+Serialize / Unserialize can be danger due to its ability to convert object and it can be used to preform object injection attack.
+So explicit sniffing not allowed in php version before php 7 thats because php7 offered new options to prevent object serialization
+see [here](http://php.net/unserialize)
+
 ## Contributing 
 
 Thank you for considering contributing to this project!

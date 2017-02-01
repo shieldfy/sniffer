@@ -56,7 +56,7 @@ class SerializeType implements TypeInterface
                     case 6:
                     case 7:
                     case 8:
-                    case 9:
+                    case 9:                        
                         break;
                     default:
                         return false;
@@ -70,9 +70,15 @@ class SerializeType implements TypeInterface
             default:
                 return false;
         }
-        if (@unserialize($value) === false) {
-            return false;
+        
+        if (version_compare(PHP_VERSION, '7.0.0') >= 0) {
+            //options added @ v 7.0 which allow no evaluating for classes
+            //object will be instantiated as __PHP_Incomplete_Class
+            if (@unserialize($value,false) === false) {
+                return false;
+            }
         }
+        
 
         return true;
     }
