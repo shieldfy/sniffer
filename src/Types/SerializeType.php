@@ -74,7 +74,7 @@ class SerializeType implements TypeInterface
         if (version_compare(PHP_VERSION, '7.0.0') >= 0) {
             //options added @ v 7.0 which allow no evaluating for classes
             //object will be instantiated as __PHP_Incomplete_Class
-            if (@unserialize($value, false) === false) {
+            if (@unserialize($value, []) === false) {
                 return false;
             }
         }
