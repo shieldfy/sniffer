@@ -26,7 +26,7 @@ class Sniffer
      *
      * @param array $types
      */
-    public function use(array $types)
+    public function overwrite(array $types)
     {
         $this->types = $types;
 
